@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./app/(tabs)/**/*.{js,jsx,ts,tsx}", // Added this path for tabs directory
+    "./(tabs)/**/*.{js,jsx,ts,tsx}", // Alternative path structure
+    "./app/tabs/**/*.{js,jsx,ts,tsx}", // Another possible path structure
+    "./**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
