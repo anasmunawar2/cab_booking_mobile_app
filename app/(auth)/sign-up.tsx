@@ -20,22 +20,17 @@ const SignUp = () => {
     code: "",
   });
 
-  // Handle submission of sign-up form
   const onSignUpPress = async () => {
     if (!isLoaded) return;
 
-    // Start sign-up process using email and password provided
     try {
       await signUp.create({
         emailAddress: form.email,
         password: form.password,
       });
 
-      // Send user an email with verification code
       await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
 
-      // Set 'pendingVerification' to true to display second form
-      // and capture OTP code
       setVerification({
         ...verification,
         state: "pending",
