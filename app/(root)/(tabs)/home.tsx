@@ -1,3 +1,4 @@
+import RideCard from "@/components/RideCard";
 import { useUser } from "@clerk/clerk-expo";
 import { FlatList, SafeAreaView } from "react-native";
 
