@@ -1,3 +1,4 @@
+import GoogleTextInput from "@/components/GoogleTextInput";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
@@ -123,6 +124,8 @@ const Home = () => {
   const loading = false;
 
   const handleSignOut = () => {};
+
+  const handleDestinationPress = () => {};
   return (
     <SafeAreaView className="bg-general-500">
       <FlatList
@@ -166,6 +169,19 @@ const Home = () => {
                 <Image source={icons.out} className="w-4 h-4 " />
               </TouchableOpacity>
             </View>
+
+            <GoogleTextInput
+              icon={icons.search}
+              containerStyle="bg-white shadow-md shadow-neutral-300"
+              handlePress={handleDestinationPress}
+            />
+
+            <>
+              <Text className="text-xl font-jakartaBold mt-5 mb-3">
+                Your Current Location
+              </Text>
+              <View className="flex flex-row items-center bg-transparent h-[300px]"></View>
+            </>
           </>
         )}
       />
