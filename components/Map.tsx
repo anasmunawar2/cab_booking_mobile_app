@@ -2,6 +2,8 @@ import { Text } from "react-native";
 import MapView, { PROVIDER_DEFAULT } from "react-native-maps";
 
 const Map = () => {
+
+  
   // const region = {};
   return (
     <MapView
@@ -9,7 +11,7 @@ const Map = () => {
       className="w-full h-full rounded-2xl"
       tintColor="black"
       mapType="mutedStandard"
-      showsPointOfInterest={false}
+      showsPointsOfInterest={false}
       // initialRegion={region}
       showsUserLocation={true}
       userInterfaceStyle="light"
