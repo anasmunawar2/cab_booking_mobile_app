@@ -24,7 +24,7 @@ const Map = () => {
       tintColor="black"
       mapType="mutedStandard"
       showsPointsOfInterest={false}
-      // initialRegion={region}
+      initialRegion={region}
       showsUserLocation={true}
       userInterfaceStyle="light"
     >

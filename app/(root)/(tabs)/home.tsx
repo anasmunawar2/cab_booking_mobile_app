@@ -147,12 +147,14 @@ const Home = () => {
 
       const address = await Location.reverseGeocodeAsync({
         latitude: location.coords?.latitude!,
-        longitude: location.coords?.longitude,
+        longitude: location.coords?.longitude!,
       });
 
       setUserLocation({
-        latitude: location.coords.latitude!,
-        longitude: location.coords.longitude!,
+        // latitude: location.coords.latitude,
+        // longitude: location.coords.longitude,
+        latitude: 37.78825,
+        longitude: -122.4324,
         address: `${address[0].name}, ${address[0].region}`,
       });
     };
